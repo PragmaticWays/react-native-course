@@ -1,8 +1,22 @@
 import React from "react";
-import { Text, StyleSheet } from "react-native";
+import { Text, StyleSheet, FlatList } from "react-native";
 
 const ListScreen = () => {
-  return <Text style={styles.text}>ListScreen</Text>;
+  const players = [
+    { name: "Rodgers" },
+    { name: "Adams" },
+    { name: "Jones" },
+    { name: "Funches" },
+    { name: "Williams" },
+  ];
+  return (
+    <FlatList
+      data={players}
+      renderItem={({ item }) => {
+        return <Text>{item.name}</Text>;
+      }}
+    />
+  );
 };
 
 const styles = StyleSheet.create({
