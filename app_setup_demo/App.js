@@ -7,11 +7,11 @@ import ListScreen from "./src/screens/ListScreen";
 const navigator = createStackNavigator(
   {
     Home: HomeScreen,
-    Component: ComponentScreen,
+    Components: ComponentScreen,
     List: ListScreen,
   },
   {
-    initialRouteName: "List",
+    initialRouteName: "Home",
     defaultNavigationOptions: {
       title: "App",
     },
