@@ -21,6 +21,15 @@ const HomeScreen = ({ navigation }) => {
       <TouchableOpacity onPress={() => navigate("Image")} style={styles.button}>
         <Text style={styles.buttonText}>Image Screen</Text>
       </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigate("Color")} style={styles.button}>
+        <Text style={styles.buttonText}>Color Screen</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => navigate("ColorAdjust")}
+        style={styles.button}
+      >
+        <Text style={styles.buttonText}>Color Adjust Screen</Text>
+      </TouchableOpacity>
     </View>
   );
 };
