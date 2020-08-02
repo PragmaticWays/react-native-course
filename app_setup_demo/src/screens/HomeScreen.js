@@ -30,6 +30,12 @@ const HomeScreen = ({ navigation }) => {
       >
         <Text style={styles.buttonText}>Color Adjust Screen</Text>
       </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => navigate("ColorAdjustReducer")}
+        style={styles.button}
+      >
+        <Text style={styles.buttonText}>Color Adjust Reducer Screen</Text>
+      </TouchableOpacity>
     </View>
   );
 };
