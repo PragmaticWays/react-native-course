@@ -36,6 +36,12 @@ const HomeScreen = ({ navigation }) => {
       >
         <Text style={styles.buttonText}>Color Adjust Reducer Screen</Text>
       </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => navigate("Counter")}
+        style={styles.button}
+      >
+        <Text style={styles.buttonText}>Counter Screen</Text>
+      </TouchableOpacity>
     </View>
   );
 };
