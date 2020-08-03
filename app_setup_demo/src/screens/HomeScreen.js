@@ -42,6 +42,9 @@ const HomeScreen = ({ navigation }) => {
       >
         <Text style={styles.buttonText}>Counter Screen</Text>
       </TouchableOpacity>
+      <TouchableOpacity onPress={() => navigate("Text")} style={styles.button}>
+        <Text style={styles.buttonText}>Text Screen</Text>
+      </TouchableOpacity>
     </View>
   );
 };
