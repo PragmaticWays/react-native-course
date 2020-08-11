@@ -1,10 +1,7 @@
 import React from "react";
 import { Text, StyleSheet, View } from "react-native";
 
-const TemplateScreen = ({ navigation }) => {
-  function navigate(screen) {
-    navigation.navigate(screen);
-  }
+const TemplateScreen = () => {
 
   return (
     <View>
