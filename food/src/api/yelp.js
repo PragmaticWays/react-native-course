@@ -1,7 +1,7 @@
-import axois from 'axios';
+import axios from 'axios';
 import { Key } from './key';
 
-export default axois.create({
+export default axios.create({
   baseURL: 'https://api.yelp.com/v3/businesses',
   headers: {
     Authorization: `Bearer ${Key.YELP}`,
