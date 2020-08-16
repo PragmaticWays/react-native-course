@@ -1,10 +1,11 @@
 import React from 'react';
 import { TextInput, StyleSheet, View } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
+import { Constants } from '../styles/constants';
 
 const SearchBar = ({ searchValue, onSearchValueChange, onSearchSubmit }) => {
   return (
-    <View style={styles.background}>
+    <View style={styles.container}>
       <MaterialIcons name='search' style={styles.icon} />
       <TextInput
         style={styles.input}
@@ -18,11 +19,11 @@ const SearchBar = ({ searchValue, onSearchValueChange, onSearchSubmit }) => {
 };
 
 const styles = StyleSheet.create({
-  background: {
+  container: {
     backgroundColor: '#DDD',
     height: 40,
     borderRadius: 4,
-    margin: 15,
+    margin: Constants.DEFAULT_MARGIN,
     padding: 5,
     flexDirection: 'row',
   },

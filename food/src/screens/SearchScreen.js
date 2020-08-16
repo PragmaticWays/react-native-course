@@ -3,6 +3,8 @@ import { Text, StyleSheet, View } from 'react-native';
 import SearchBar from '../components/SearchBar';
 import useResults from '../hooks/useSearchResults';
 import ResultsList from '../components/ResultsList';
+import { Constants } from '../styles/constants';
+import { ScrollView } from 'react-native-gesture-handler';
 
 const SearchScreen = () => {
   const [searchValue, setSearchValue] = useState('');
@@ -13,25 +15,34 @@ const SearchScreen = () => {
   };
 
   return (
-    <View>
+    <>
       <SearchBar
         searchValue={searchValue}
         onSearchValueChange={setSearchValue}
         onSearchSubmit={() => onSearchSubmit(searchValue)}
       />
-      <Text style={styles.text}>Hello SearchScreen!</Text>
-      {errorMessage ? <Text>{errorMessage}</Text> : null}
-      <Text>There are {searchResults.length} results.</Text>
-      <ResultsList title='Cost Effective' results={filterSearchResults('$')} />
-      <ResultsList title='Average' results={filterSearchResults('$$')} />
-      <ResultsList title='Expensive' results={filterSearchResults('$$$')} />
-    </View>
+      <Text style={styles.title}>Hello SearchScreen!</Text>
+      {errorMessage ? <Text style={styles.text}>{errorMessage}</Text> : null}
+      <Text style={styles.text}>There are {searchResults.length} results.</Text>
+      <ScrollView>
+        <ResultsList
+          title='Cost Effective'
+          results={filterSearchResults('$')}
+        />
+        <ResultsList title='Average' results={filterSearchResults('$$')} />
+        <ResultsList title='Expensive' results={filterSearchResults('$$$')} />
+      </ScrollView>
+    </>
   );
 };
 
 const styles = StyleSheet.create({
-  text: {
+  title: {
     fontSize: 30,
+    marginLeft: Constants.DEFAULT_MARGIN,
+  },
+  text: {
+    marginLeft: Constants.DEFAULT_MARGIN,
   },
 });
 

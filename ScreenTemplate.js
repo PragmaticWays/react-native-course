@@ -4,9 +4,9 @@ import { Text, StyleSheet, View } from "react-native";
 const TemplateScreen = () => {
 
   return (
-    <View>
+    <>
       <Text style={styles.text}>Hello TemplateScreen!</Text>
-    </View>
+    </>
   );
 };
 
