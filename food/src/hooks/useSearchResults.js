@@ -11,7 +11,6 @@ export default () => {
   }, []);
 
   const onSearchSubmit = async (_searchValue) => {
-    console.log('hello');
     try {
       const response = await yelp.get('/search', {
         params: {

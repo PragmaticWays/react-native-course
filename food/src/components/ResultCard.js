@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, StyleSheet, View, Image } from 'react-native';
 import { Constants } from '../styles/constants';
 
-const ResultDetail = ({ result }) => {
+const ResultCard = ({ result }) => {
   return (
     <View style={styles.container}>
       <Image style={styles.image} source={{ uri: result.image_url }} />
@@ -32,4 +32,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ResultDetail;
+export default ResultCard;

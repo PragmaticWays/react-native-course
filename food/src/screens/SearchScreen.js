@@ -21,9 +21,7 @@ const SearchScreen = () => {
         onSearchValueChange={setSearchValue}
         onSearchSubmit={() => onSearchSubmit(searchValue)}
       />
-      <Text style={styles.title}>Hello SearchScreen!</Text>
       {errorMessage ? <Text style={styles.text}>{errorMessage}</Text> : null}
-      <Text style={styles.text}>There are {searchResults.length} results.</Text>
       <ScrollView>
         <ResultsList
           title='Cost Effective'
@@ -31,6 +29,10 @@ const SearchScreen = () => {
         />
         <ResultsList title='Average' results={filterSearchResults('$$')} />
         <ResultsList title='Expensive' results={filterSearchResults('$$$')} />
+        <ResultsList
+          title='Super Fancy'
+          results={filterSearchResults('$$$$')}
+        />
       </ScrollView>
     </>
   );
